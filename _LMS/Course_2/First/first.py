@@ -1,14 +1,23 @@
-import pandas as pd
+import numpy as np
 
-dict = {
-    "Names": ["John", "Bill", "Edvard", "Bard", "Igor", "Yelisey", "Stepan"],
-    "Ages": [12, 15, 18, 10, 11, 11, 11],
-    "Student": [0, 0, 0, 1, 1, 0, 0]
-}
+# задача 1
+arr = np.random.randint(1, 11, size=100)
+biggest_7 = np.count_nonzero(arr > 7)
+percent = biggest_7 / len(arr) * 100
 
-df = pd.DataFrame(dict)
-#sliced = pd.concat([df.head(3), df.tile(3)])
-to_str = df.to_string(max_rows=6)
-print(to_str)
+#print(f"Процент элементов болше 7: {percent}")
 
-df.to_csv('first.csv')
+# Задача 2
+arr = np.random.randint(1, 11, size=1000)
+biggest_7 = np.count_nonzero(arr > 7)
+percent = biggest_7 / len(arr) * 100
+p = biggest_7 * 0.2
+print(f"{p:.1f}")
+
+# Задача 3
+matr = np.tile(np.arange(1, 11), (10, 1))
+print(matr)
+
+# Задача 4
+matr_sum = np.sum(matr, axis=0)
+print(matr_sum)

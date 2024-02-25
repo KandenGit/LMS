@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+
 lr = 0.01
 w1 = 0
 w0 = 0
@@ -11,8 +13,6 @@ for i in range(len(x)):
 
 print(f"w0: {w0}\nw1: {w1}")
 
-# проверка хорошие веса или нет
-import matplotlib.pyplot as plt
 plt.scatter(x, y)
 plt.plot(x, [w1 * i + w0 for i in x], color="red")
 plt.xlabel("X")
